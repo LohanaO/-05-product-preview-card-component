@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:  hsl(30, 38%, 92%);
+  font-family: 'montserrat', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color:  hsl(0, 0%, 100%);
+  border-radius: 10px;
+  width: 90%;
+  animation: fadeIn 2s ease-in-out;
+
+}
+
+.card img {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px 10px 0 0;
+  
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.content h4 {
+  letter-spacing: 5px;
+  color:  hsl(228, 12%, 48%);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.content h2 {
+  color:  hsl(212, 21%, 14%);
+  font-family: 'fraunces', serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.content p {
+  color:  hsl(228, 12%, 48%);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5; 
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.price-container .price {
+  color:  hsl(158, 36%, 37%);
+  font-family: 'fraunces', serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.price-container .price2 {
+  color:  hsl(228, 12%, 48%);
+  text-decoration: line-through;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  hsl(158, 36%, 37%);
+  color:  hsl(0, 0%, 100%);
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  padding: 16px;
+  transition: all 0.5s ease;
+}
+
+.btn button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: transparent;
+  border: none;
+  color:  hsl(0, 0%, 100%);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn img {
+  width: 18px;
+}
+
+.btn:hover {
+  cursor:pointer;
+  background-color: #b4915b;
+  box-shadow: 0 0 10px 5px hsl(42, 96%, 9%);
+}
+
+.desktop {
+  display: none;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+@media (min-width: 768px) {
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    max-width: 650px;
+    background-color:  hsl(0, 0%, 100%);
+  }
+
+  .card img {
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    padding: 15px 45px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+  }
+
+  .desktop {
+    display: block;
+    
+  }
+  .mobile {
+    display: none;
+  }
+
+}
